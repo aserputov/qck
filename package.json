@@ -1,15 +1,17 @@
 {
-	"name": "qck-ssg",
+	"name": "qck",
 	"version": "1.0.1",
 	"description": "The Best Static Site Generator",
+	"main": "index.js",
+	"bin": {
+		"qck": "./index.js"
+	},
 	"keywords": [],
 	"author": "Anatoliy Serputov",
 	"license": "MIT",
 	"type": "module",
 	"scripts": {
-		"lint": "eslint .",
-		"dev": "nodemon -e js,md,html --ignore dist/ src/index.js",
-		"start": "node src/index.js"
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {
 		"boxen": "^5.1.1",

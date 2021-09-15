@@ -1,3 +1,5 @@
+#!/usr/bin/env node 
+
 import fs from 'fs'
 import glob from 'glob'
 import matter from 'gray-matter'
@@ -7,6 +9,8 @@ import path from 'path'
 import boxen from 'boxen'
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
+
+
 
 const options  = yargs(hideBin(process.argv))
  .usage("Usage: -h <file>")
@@ -61,11 +65,21 @@ const main = () => {
 	const srcPath = path.resolve('src')
 	const outPath = path.resolve('dist')
 	const template = fs.readFileSync(path.join(srcPath, 'template.html'), 'utf8')
-	const filenames = glob.sync(srcPath + `/pages/**/${filename}`)
+	if(filename.includes('.')){
+		const filenames = glob.sync(srcPath + `/**/${filename}`)
+		filenames.forEach((filename) => {
+			processFile(filename, template, outPath)
+		})
+		console.log("ok")
+	}else{
+		const filenames = glob.sync(srcPath + `/${filename}/**/*.txt`)
+		filenames.forEach((filename) => {
+			processFile(filename, template, outPath)
+		})
+	}
+	
 
-	filenames.forEach((filename) => {
-		processFile(filename, template, outPath)
-	})
+	
 }
 
 main()
