@@ -1,0 +1,29 @@
+{
+	"name": "qck-ssg",
+	"version": "1.0.1",
+	"description": "The Best Static Site Generator",
+	"keywords": [],
+	"author": "Anatoliy Serputov",
+	"license": "MIT",
+	"type": "module",
+	"scripts": {
+		"lint": "eslint .",
+		"dev": "nodemon -e js,md,html --ignore dist/ src/index.js",
+		"start": "node src/index.js"
+	},
+	"dependencies": {
+		"boxen": "^5.1.1",
+		"glob": "^7.1.6",
+		"gray-matter": "^4.0.2",
+		"marked": "^1.1.1",
+		"mkdirp": "^1.0.4",
+		"yargs": "^17.1.1-candidate.0"
+	},
+	"devDependencies": {
+		"eslint": "^7.7.0",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-prettier": "^3.1.4",
+		"nodemon": "^2.0.4",
+		"prettier": "^2.0.5"
+	}
+}
