@@ -11,7 +11,9 @@
 	"license": "MIT",
 	"type": "module",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"lint": "eslint .",
+		"dev": "nodemon -e js,md,html --ignore dist/ src/index.js",
+		"start": "node src/index.js"
 	},
 	"dependencies": {
 		"boxen": "^5.1.1",
