@@ -35,9 +35,9 @@ const readFile = (filename) => {
   return { ...parsed, html };
 };
 
-const templatize = (template, { date, title, content }) =>
+const templatize = (template, { link, title, content }) =>
   template
-    .replace(/<!-- PUBLISH_DATE -->/g, date)
+    .replace(/<!-- Link -->/g, link)
     .replace(/<!-- TITLE -->/g, title)
     .replace(/<!-- CONTENT -->/g, content);
 
@@ -59,7 +59,7 @@ const processFile = (filename, template, outPath) => {
   const outfilename = getOutputFilename(filename, outPath);
   arr.push(` ${outfilename}`);
   const templatized = templatize(template, {
-    date: `${style}`,
+    link: `${style}`,
     title: file.data.title,
     content: file.html,
   });
