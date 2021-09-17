@@ -51,7 +51,7 @@ Anatoliy Serputov
 # Links
 - Blog [```Medium```](https://medium.com/@aserputov/qck-ssg-eb593782b856)
 
-- Static Website Ex. [```Vercel```](https://qck.vercel.app)
+- Static Website Ex. [```Vercel```](https://cli-ssg-qck-cmp74iuwg-aserputov.vercel.app)
 # License
 
 MIT License 
