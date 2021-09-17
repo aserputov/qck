@@ -6,17 +6,19 @@ Quick (Static Site Generator)- is a software application for creating finished H
 
 To launch the app: 
 
-```bash 
+
 1. Clone the repo:
 
-$git clone ```https://github.com/aserputov/final-qck-ssg```
+    $git clone ``` https://github.com/aserputov/final-qck-ssg ```
 
-2.Install dependencies:
+2. Install dependencies:
 
-```npm install```
+    ``` npm install ```
 
-3. ```You can start working```
-```
+3. You can start working:
+
+    ```node .  ```
+
 # Features
 
 - ```node . -- version (-v) ```
@@ -34,8 +36,13 @@ $git clone ```https://github.com/aserputov/final-qck-ssg```
 
 ## Option Features
 
-- 1
-- 2
+- type ```-s``` or ```-stylesheet``` on the command line, it will be converted to a style tag link.
+
+-  ```$npm install --save-dev prettier```
+
+-  Populated the ```<title>...</title>```
+
+- Automatically generate an ```index.html``` with all the links.
 
 # Authors
 
