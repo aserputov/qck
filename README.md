@@ -34,6 +34,8 @@ To launch the app:
 
 - ```node . --input /SherlocksStories``` (/src/page is an example you can use another path to a folder )
 
+- ``` node . --input /SherlocksStories -s https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/tufte.min.css```
+
 ## Option Features
 
 - type ```-s``` or ```-stylesheet``` on the command line, it will be converted to a style tag link.
