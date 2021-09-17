@@ -1,5 +1,6 @@
-THE ADVENTURE OF THE SIX NAPOLEONS
-
+---
+title: THE ADVENTURE OF THE SIX NAPOLEONS
+---
 
 It was no very unusual thing for Mr. Lestrade, of Scotland Yard,
 to look in upon us of an evening, and his visits were welcome to

@@ -1,36 +1,50 @@
 # QCK-SSG
 release 0.1
-# Features
-To start the app: 
+
+Quick (Static Site Generator)- is a software application for creating finished HTML pages from hard data and files, without having to author any HTML by hand. Made with ```Node.js.```
+# Start
+
+To launch the app: 
+
+```bash 
+1. Clone the repo:
+
+$git clone ```https://github.com/aserputov/final-qck-ssg```
+
+2.Install dependencies:
 
 ```npm install```
 
-To create .html files.
-## One
+3. ```You can start working```
+```
+# Features
 
-```node . -i index.txt``` (index.txt as an example you can use another file name )
+- ```node . -- version (-v) ```
 
-## Many
+- ```node . -- help (-h)```
 
-```node . -i /src/pages``` (/src/page is an example you can use another path to a folder )
+- ```node . -- input (-i)```
 
+## Example
+(Start from the main directory)
 
-# Version
+- ```node . -i index.txt``` (index.txt as an example you can use another file name )
 
-```node . -- version (-v) ```
+- ```node . --input /SherlocksStories``` (/src/page is an example you can use another path to a folder )
 
-# Help
+## Option Features
 
-```node . -- help (-h)```
+- 1
+- 2
 
 # Authors
 
 Anatoliy Serputov
 
 # Links
-Blog ```https://medium.com/@aserputov/qck-ssg-eb593782b856```
+- Blog [```Medium```](https://medium.com/@aserputov/qck-ssg-eb593782b856)
 
-Example ```https://qck.vercel.app```
+- Static Website Ex. [```Vercel```](https://qck.vercel.app)
 # License
 
 MIT License 
