@@ -77,7 +77,7 @@ const main = () => {
   if (filename.includes(".")) {
     const filenames = glob.sync(srcPath + `/**/${filename}`);
     filenames.forEach((filename) => {
-      processFile(filename, prettier.format(template), outPath);
+      processFile(filename, template, outPath);
     });
   } else {
     const filenames = glob.sync(srcPath + `/${filename}/**/*.txt`);
