@@ -47,6 +47,7 @@ To launch the app:
 - Automatically generate an ```index.html``` with all the links.
 
 - Generates markdown file to html file
+
     example: ```node . --input /SherlocksStories/testmd.md```
 
 # Authors
