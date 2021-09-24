@@ -13,6 +13,7 @@ import prettier from "prettier";
 
 const dir = "dist";
 
+
 // delete directory recursively
 fs.rmdir(dir, { recursive: true }, (err) => {
   if (err) {
@@ -58,13 +59,24 @@ setTimeout(function () {
     fs.writeFileSync(filename, contents);
   };
 
+  //for .txt input file
   const getOutputFilename = (filename, outPath) => {
     const basename = path.basename(filename);
     const newfilename = basename.substring(0, basename.length - 3) + "html";
     const outfile = path.join(outPath, newfilename);
     return outfile;
   };
+
+  //for .md input file //delete last 2 elements which is "md"
+  const getOutputFilename_md = (filename, outPath) => {
+    const basename = path.basename(filename);
+    const newfilename = basename.substring(0, basename.length - 2) + "html";
+    const outfile = path.join(outPath, newfilename);
+    return outfile;
+  };
+
   let arr = [];
+  //read->make temp->save file (.txt)
   const processFile = (filename, template, outPath) => {
     const file = readFile(filename);
     const outfilename = getOutputFilename(filename, outPath);
@@ -74,25 +86,54 @@ setTimeout(function () {
       title: file.data.title,
       content: file.html,
     });
-
     saveFile(outfilename, templatized);
-    // console.log(` ${outfilename}`)
+  };
 
-    // console.log(` ${arr}`)
+  //read->make temp->save file (.md)
+  const processFile_md = (filename, template, outPath) => {
+    const file = readFile(filename);
+
+    const outfilename = getOutputFilename_md(filename, outPath);
+    arr.push(` ${outfilename}`);
+
+    var lines = file.content.toString().split(/\r?\n\r?\n/);
+    var mdtext = "";
+    lines.forEach((line) => {
+      mdtext += line
+        .replace(/^# (.*$)/gim, "\n<h1>$1</h1>")
+        .replace(/^## (.*$)/gim, "\n<h2>$1</h2>")
+        .replace(/^### (.*$)/gim, "\n<h3>$1</h3>")
+        .replace(/\*\*(.*)\*\*/gim, "\n<b>$1</b>")
+        .replace(/\_\_(.*)\_\_/gim, "\n<b>$1</b>")
+        .replace(/\*(.*)\*/gim, "\n<i>$1</i>")
+        .replace(/\_(.*)\_/gim, "\n<i>$1</i>");
+    });
+    const templatized = templatize(template, {
+      content: mdtext,
+    });
+    saveFile(outfilename, templatized);
   };
 
   const main = () => {
     const srcPath = path.resolve("src");
     const outPath = path.resolve("dist");
-    const template = fs.readFileSync(
-      path.join(srcPath, "template.html"),
-      "utf8"
-    );
+    const template = fs.readFileSync(path.join(srcPath, "template.html"), "utf8");
+
     if (filename.includes(".")) {
-      const filenames = glob.sync(srcPath + `/**/${filename}`);
-      filenames.forEach((filename) => {
-        processFile(filename, template, outPath);
-      });
+      //if the file name contains txt
+      if (filename.includes("txt")) {
+        const filenames = glob.sync(srcPath + `/**/${filename}`);
+        filenames.forEach((filename) => {
+          processFile(filename, template, outPath);
+        });
+      }
+      //if the file name does NOT contain txt
+      else {
+        const filenames = glob.sync(srcPath + `/**/${filename}`);
+        filenames.forEach((filename) => {
+          processFile_md(filename, template, outPath);
+        });
+      }
     } else {
       const filenames = glob.sync(srcPath + `/${filename}/**/*.txt`);
       filenames.forEach((filename) => {
@@ -113,7 +154,7 @@ setTimeout(function () {
       }
     );
     arr.forEach((path) => {
-      var afterComma = path.substr(path.indexOf("t/") + 2);
+      var afterComma = path.substr(path.indexOf("t/") + 2); //2 blank lines
       var after = afterComma.substring(0, afterComma.indexOf("."));
       // console.log(after);
       // var replaced = path.split(' ').join('%20');
