@@ -100,14 +100,14 @@ setTimeout(function () {
     var mdtext = "";
     lines.forEach((line) => {
       mdtext += line
-        .replace(/^# (.*$)/gim, "\n<h1>$1</h1>")
-        .replace(/^## (.*$)/gim, "\n<h2>$1</h2>")
-        .replace(/^### (.*$)/gim, "\n<h3>$1</h3>")
-        .replace(/\*\*(.*)\*\*/gim, "<br><b>$1</b>")
-        .replace(/\_\_(.*)\_\_/gim, "<br><b>$1</b>")
-        .replace(/\*(.*)\*/gim, "<br><i>$1</i>")
-        .replace(/\_(.*)\_/gim, "<br><i>$1</i>")
-        .replace(/\`(.*)\`/gim, "<br><code>$1</code>");
+      .replace(/^# (.*$)/gim, "\n<h1>$1</h1>")
+      .replace(/^## (.*$)/gim, "\n<h2>$1</h2>")
+      .replace(/^### (.*$)/gim, "\n<h3>$1</h3>")
+      .replace(/\*\*(.*)\*\*/gim, "<br><b>$1</b>")
+      .replace(/\_\_(.*)\_\_/gim, "<br><b>$1</b>")
+      .replace(/\*(.*)\*/gim, "<br><i>$1</i>")
+      .replace(/\_(.*)\_/gim, "<br><i>$1</i>")
+      .replace("---", "\n<hr>")
     });
     const templatized = templatize(template, {
       content: mdtext,
@@ -119,7 +119,7 @@ setTimeout(function () {
     const srcPath = path.resolve("src");
     const outPath = path.resolve("dist");
     const template = fs.readFileSync(path.join(srcPath, "template.html"), "utf8");
-    // console.log(filenames)
+
     if (filename.includes(".")) {
       //if the file name contains txt
       if (filename.includes("txt")) {
@@ -136,17 +136,9 @@ setTimeout(function () {
         });
       }
     } else {
-    
       const filenames = glob.sync(srcPath + `/${filename}/**/*.txt`);
-      // console.log(filenames)
       filenames.forEach((filename) => {
-        // console.log(filename)
-        if (filename.includes("txt")) {
-
-          processFile(filename, template, outPath);
-        }else { 
-            processFile_md(filename, template, outPath);
-        }
+        processFile(filename, template, outPath);
       });
     }
   };
