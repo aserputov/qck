@@ -17,7 +17,8 @@ const dir = "dist";
 // delete directory recursively
 fs.rmdir(dir, { recursive: true }, (err) => {
   if (err) {
-    throw err;
+    console.error('Directory cant be deleted');
+    process.exit(1);
   }
 
   console.log(`${dir} is deleted!`);
