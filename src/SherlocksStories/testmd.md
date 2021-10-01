@@ -10,3 +10,5 @@ title: Markdown Feature
 *This should be italic*
 
 **This is bold**
+
+---

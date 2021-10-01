@@ -136,9 +136,14 @@ setTimeout(function () {
         });
       }
     } else {
+      
       const filenames = glob.sync(srcPath + `/${filename}/**/*.txt`);
       filenames.forEach((filename) => {
+        if (filename.includes(".txt")) {
         processFile(filename, template, outPath);
+        }else{
+          processFile_md(filename, template, outPath);
+        }
       });
     }
   };
