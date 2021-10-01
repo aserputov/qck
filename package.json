@@ -1,5 +1,5 @@
 {
-	"name": "qck",
+	"name": "qck-ssg-final",
 	"version": "1.0.1",
 	"description": "The Best Static Site Generator",
 	"main": "index.js",
