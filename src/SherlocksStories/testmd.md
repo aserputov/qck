@@ -11,4 +11,6 @@ title: Markdown Feature
 
 **This is bold**
 
+`This is code`
+
 ---
