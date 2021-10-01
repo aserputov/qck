@@ -107,7 +107,7 @@ setTimeout(function () {
       .replace(/\_\_(.*)\_\_/gim, "<br><b>$1</b>")
       .replace(/\*(.*)\*/gim, "<br><i>$1</i>")
       .replace(/\_(.*)\_/gim, "<br><i>$1</i>")
-      .replace(/\`(.*)\`/gim, "<br><code>$1</code>")
+      .replace("---", "<hr>")
     });
     const templatized = templatize(template, {
       content: mdtext,
