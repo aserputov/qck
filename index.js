@@ -157,7 +157,7 @@ setTimeout(function () {
     arr.forEach((path) => {
       var afterComma = path.substr(path.indexOf("t/") + 2); //2 blank lines
       var after = afterComma.substring(0, afterComma.indexOf("."));
-      // console.log(after);
+      console.log(after);
       // var replaced = path.split(' ').join('%20');
       fs.appendFile(
         "dist/index.html",
