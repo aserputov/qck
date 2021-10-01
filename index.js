@@ -107,7 +107,7 @@ setTimeout(function () {
       .replace(/\_\_(.*)\_\_/gim, "<br><b>$1</b>")
       .replace(/\*(.*)\*/gim, "<br><i>$1</i>")
       .replace(/\_(.*)\_/gim, "<br><i>$1</i>")
-      .replace(/\`(.*)\`/gim, "<br><code>$1</code>")
+      .replace("---", "\n<hr>")
     });
     const templatized = templatize(template, {
       content: mdtext,
@@ -138,7 +138,11 @@ setTimeout(function () {
     } else {
       const filenames = glob.sync(srcPath + `/${filename}/**/*.txt`);
       filenames.forEach((filename) => {
+        if (filename.includes(".txt")) {
         processFile(filename, template, outPath);
+        }else{
+          processFile_md(filename, template, outPath);
+        }
       });
     }
   };
