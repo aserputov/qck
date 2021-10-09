@@ -27,6 +27,8 @@ To launch the app:
 
 - ```node . -- input (-i)```
 
+- ```node . -- config (-c)```
+
 ## Example
 (Start from the main directory)
 
@@ -49,6 +51,18 @@ To launch the app:
 - Generates markdown file to html file
 
     example: ```node . --input /SherlocksStories/testmd.md```
+
+- Support for configuration files
+
+## Configuration file
+Configuration file should contain the following attributes: *input*, *stylesheet*
+
+```
+{
+    "input":"SherlocksStories/testmd.md",
+    "stylesheet": "https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/tufte.min.css"
+}
+```
 
 # Authors
 
