@@ -10,6 +10,7 @@ import boxen from "boxen";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 import prettier from "prettier";
+import { exit } from "process";
 
 const dir = "dist";
 
@@ -30,15 +31,44 @@ setTimeout(function () {
     .option("i", {
       alias: "input",
       describe: "File name",
-      type: "string",
-      demandOption: true,
+      type: "string"
+    })
+    .option("c", {
+      alias: "config",
+      describe: "Configuration file", 
+      type: "string"
     })
     .version("v", "version", "qck-ssg v0.1.2")
     .alias("v", "version")
     .alias("s", "stylesheet").argv;
+  
 
-  let filename = `${options.input}`;
-  let style = `${options.stylesheet}`;
+  let filename = options.input;
+  let style = options.stylesheet;
+  let config_path = options.config;
+
+  // Check if there is a config argument
+  if(config_path) {
+    const config_file = fs.readFileSync(config_path)
+    const parsed = JSON.parse(config_file)
+    // Check if there is a filename in config file
+    if (parsed.input) {
+        if (parsed.stylesheet) {
+          style = parsed.stylesheet
+        } else {
+          style = ""
+        }
+        filename = parsed.input
+    } else {
+      console.log("Missing input path to a file or directory in config file")
+      exit()
+    }
+  } else {
+    if(!filename) {
+      console.log("Missing input path to a file or directory")
+      exit()
+    }
+  }
 
   const readFile = (filename) => {
     const rawFile = fs.readFileSync(filename, "utf8");
