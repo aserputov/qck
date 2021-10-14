@@ -9,12 +9,6 @@ import { Config } from "./config.js";
 
 export function Main(file) {
   let arr = []; // I can't see the way how to get rid of it because I push into that array all the files path's to build one index.js
-  let filename = file.input;
-  let style = file.stylesheet;
-
-  if (filename.includes(".json")) {
-    Config();
-  }
 
   const readFile = (filename) => {
     const rawFile = fs.readFileSync(filename, "utf8");
@@ -54,7 +48,7 @@ export function Main(file) {
     const outfilename = getOutputFilename(filename, outPath);
     arr.push(` ${outfilename}`);
     const templatized = templatize(template, {
-      link: `${style}`,
+      link: `${file.stylesheet}`,
       title: file.data.title,
       content: file.html,
     });
@@ -93,20 +87,19 @@ export function Main(file) {
       "utf8"
     );
 
-    if (filename.includes(".")) {
-      if (filename.includes("txt")) {
-        const filenames = glob.sync(srcPath + `/**/${filename}`);
-        filenames.forEach((filename) => {
+    if (file.input.includes(".")) {
+      const filenames = glob.sync(srcPath + `/**/${file.input}`);
+      filenames.forEach((filename) => {
+        if (filename.includes("txt")) {
           processFile(filename, template, outPath);
-        });
-      } else {
-        const filenames = glob.sync(srcPath + `/**/${filename}`);
-        filenames.forEach((filename) => {
+        } else if (filename.includes("md")) {
           processFile_md(filename, template, outPath);
-        });
-      }
+        } else if (filename.includes(".json")) {
+          Config();
+        }
+      });
     } else {
-      const filenames = glob.sync(srcPath + `/${filename}/**/*.txt`);
+      const filenames = glob.sync(srcPath + `/${file.input}/**/*.txt`);
       filenames.forEach((filename) => {
         if (filename.includes(".txt")) {
           processFile(filename, template, outPath);
