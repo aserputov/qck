@@ -1,4 +1,5 @@
 import fs from "fs";
+
 export function Create(arr) {
   fs.writeFile(
     "dist/index.html",
