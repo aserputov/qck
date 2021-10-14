@@ -9,14 +9,9 @@ import path from "path";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 import { exit } from "process";
+import { Create } from './create.js';
 
-const dir = "dist";
-
-
-// delete directory recursively
-fs.rmdirSync(dir, { recursive: true });
-
-
+fs.rmdirSync("dist", { recursive: true });
   const options = yargs(hideBin(process.argv))
     .usage("Usage: -h <file>")
     .option("i", {
@@ -30,19 +25,17 @@ fs.rmdirSync(dir, { recursive: true });
       type: "string"
     })
     .version("v", "version", "qck-ssg v0.1.2")
-    .alias("v", "version")
     .alias("s", "stylesheet").argv;
   
 
   let filename = options.input;
   let style = options.stylesheet;
-  let config_path = options.config;
+  let configPath = options.config;
 
-  // Check if there is a config argument
-  if(config_path) {
-    const config_file = fs.readFileSync(config_path)
+  
+  if(configPath) {
+    const config_file = fs.readFileSync(configPath)
     const parsed = JSON.parse(config_file)
-    // Check if there is a filename in config file
     if (parsed.input) {
         if (parsed.stylesheet) {
           style = parsed.stylesheet
@@ -60,6 +53,8 @@ fs.rmdirSync(dir, { recursive: true });
       exit()
     }
   }
+
+
 
   const readFile = (filename) => {
     const rawFile = fs.readFileSync(filename, "utf8");
@@ -80,8 +75,6 @@ fs.rmdirSync(dir, { recursive: true });
     mkdirp.sync(dir);
     fs.writeFileSync(filename, contents);
   };
-
-  //for .txt input file
   const getOutputFilename = (filename, outPath) => {
     const basename = path.basename(filename);
     const newfilename = basename.substring(0, basename.length - 3) + "html";
@@ -89,7 +82,6 @@ fs.rmdirSync(dir, { recursive: true });
     return outfile;
   };
 
-  //for .md input file //delete last 2 elements which is "md"
   const getOutputFilename_md = (filename, outPath) => {
     const basename = path.basename(filename);
     const newfilename = basename.substring(0, basename.length - 2) + "html";
@@ -98,7 +90,7 @@ fs.rmdirSync(dir, { recursive: true });
   };
 
   let arr = [];
-  //read->make temp->save file (.txt)
+  
   const processFile = (filename, template, outPath) => {
     const file = readFile(filename);
 
@@ -112,13 +104,11 @@ fs.rmdirSync(dir, { recursive: true });
     saveFile(outfilename, templatized);
   };
 
-  //read->make temp->save file (.md)
+
   const processFile_md = (filename, template, outPath) => {
     const file = readFile(filename);
-
     const outfilename = getOutputFilename_md(filename, outPath);
     arr.push(` ${outfilename}`);
-
     var lines = file.content.toString().split(/\r?\n\r?\n/);
     var mdtext = "";
     lines.forEach((line) => {
@@ -170,33 +160,12 @@ fs.rmdirSync(dir, { recursive: true });
     }
   };
 
-  main();
 
-  const create = () => {
-    fs.writeFile(
-      "dist/index.html",
-      "<hr><br><h1 style='text-align:center;'><em>List of Stories</em></h1><p style='text-align:center;'>(Sherlock Holmes)</p><hr> ",
-      function (err) {
-        if (err) throw err;
-        console.log("Optional Main(Index) File is created successfully.");
-      }
-    );
-    arr.forEach((path) => {
-      var afterComma = path.substr(path.indexOf("t/") + 2); 
-      var after = afterComma.substring(0, afterComma.indexOf("."));
-      console.log(after);
-      fs.appendFile(
-        "dist/index.html",
-        `<h3 style='text-align:center; text-decoration: none'><a href="${path}">${after}</a></h3><br>` +
-          "\n",
-        function (err) {
-          if (err) throw err;
-          console.log("Data is written to file successfully.");
-        }
-      );
-    });
-  };
-  create();
+
+ 
+
+  main();
+  Create(arr);
 
 
 
