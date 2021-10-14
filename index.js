@@ -6,26 +6,17 @@ import matter from "gray-matter";
 import marked from "marked";
 import mkdirp from "mkdirp";
 import path from "path";
-import boxen from "boxen";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-import prettier from "prettier";
 import { exit } from "process";
 
 const dir = "dist";
 
 
 // delete directory recursively
-fs.rmdir(dir, { recursive: true }, (err) => {
-  if (err) {
-    console.error('Directory cant be deleted');
-    process.exit(1);
-  }
+fs.rmdirSync(dir, { recursive: true });
 
-  console.log(`${dir} is deleted!`);
-});
 
-setTimeout(function () {
   const options = yargs(hideBin(process.argv))
     .usage("Usage: -h <file>")
     .option("i", {
@@ -110,6 +101,7 @@ setTimeout(function () {
   //read->make temp->save file (.txt)
   const processFile = (filename, template, outPath) => {
     const file = readFile(filename);
+
     const outfilename = getOutputFilename(filename, outPath);
     arr.push(` ${outfilename}`);
     const templatized = templatize(template, {
@@ -153,14 +145,13 @@ setTimeout(function () {
     const template = fs.readFileSync(path.join(srcPath, "template.html"), "utf8");
 
     if (filename.includes(".")) {
-      //if the file name contains txt
+
       if (filename.includes("txt")) {
         const filenames = glob.sync(srcPath + `/**/${filename}`);
         filenames.forEach((filename) => {
           processFile(filename, template, outPath);
         });
       }
-      //if the file name does NOT contain txt
       else {
         const filenames = glob.sync(srcPath + `/**/${filename}`);
         filenames.forEach((filename) => {
@@ -168,7 +159,6 @@ setTimeout(function () {
         });
       }
     } else {
-      
       const filenames = glob.sync(srcPath + `/${filename}/**/*.txt`);
       filenames.forEach((filename) => {
         if (filename.includes(".txt")) {
@@ -192,28 +182,22 @@ setTimeout(function () {
       }
     );
     arr.forEach((path) => {
-      var afterComma = path.substr(path.indexOf("t/") + 2); //2 blank lines
+      var afterComma = path.substr(path.indexOf("t/") + 2); 
       var after = afterComma.substring(0, afterComma.indexOf("."));
       console.log(after);
-      // var replaced = path.split(' ').join('%20');
       fs.appendFile(
         "dist/index.html",
         `<h3 style='text-align:center; text-decoration: none'><a href="${path}">${after}</a></h3><br>` +
           "\n",
-        // callback function that is called after writing file is done
         function (err) {
           if (err) throw err;
-          // if no error
           console.log("Data is written to file successfully.");
         }
       );
     });
   };
   create();
-}, 1000);
 
 
 
-
-
-// START OF(LINES 219:)
+// 213 lines before start 
