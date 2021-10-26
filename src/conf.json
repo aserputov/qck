@@ -1,0 +1,5 @@
+{
+    "input":"SherlocksStories/testmd.md",
+    "stylesheet": "https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/tufte.min.css",
+    "themes: ['@docusaurus/theme-classic', '@docusaurus/theme-live-codeblock']"
+}
