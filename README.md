@@ -27,7 +27,7 @@ To launch the app:
 
 - ```node . -- input (-i)```
 
-- ```node . -- config (-c)```
+- ```node . -- config (-c)```(Themes Update)
 
 ## Example
 (Start from the main directory)
