@@ -1,27 +1,42 @@
 {
-	"name": "qck-ssg-final",
-	"version": "1.0.1",
-	"description": "The Best Static Site Generator",
-	"main": "index.js",
-	"bin": {
-		"qck": "./index.js"
-	},
-	"keywords": [],
-	"author": "Anatoliy Serputov",
-	"license": "MIT",
-	"type": "module",
-	"scripts": {
-		"lint": "eslint .",
-		"dev": "nodemon -e js,md,html --ignore dist/ src/index.js",
-		"start": "node src/index.js"
-	},
-	"dependencies": {
-		"boxen": "^5.1.1",
-		"glob": "^7.1.6",
-		"gray-matter": "^4.0.2",
-		"marked": "^1.1.1",
-		"mkdirp": "^1.0.4",
-		"yargs": "^17.1.1-candidate.0",
-		"prettier": "2.4.1"
-	}
+  "name": "qck-ssg-final",
+  "version": "1.0.1",
+  "description": "The Best Static Site Generator",
+  "main": "index.js",
+  "bin": {
+    "qck": "./index.js"
+  },
+  "keywords": [],
+  "author": "Anatoliy Serputov",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "prettier": "prettier \"./src/**/*.{js,jsx,json,yaml,yml,md}\" --write",
+    "check-lint": "npx eslint . ",
+    "dev": "nodemon -e js,md,html --ignore dist/ src/index.js",
+    "start": "node src/index.js",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "boxen": "^5.1.1",
+    "glob": "^7.1.6",
+    "gray-matter": "^4.0.2",
+    "marked": "^1.1.1",
+    "mkdirp": "^1.0.4",
+    "yargs": "^17.1.1-candidate.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.0",
+    "prettier": "^2.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run test"
+    }
+  }
 }

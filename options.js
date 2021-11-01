@@ -3,8 +3,9 @@ import { hideBin } from "yargs/helpers";
 import { Main } from "./main.js";
 
 export function Options() {
+  // eslint-disable-next-line
   function chooseOptions(_callback) {
-    const options = yargs(hideBin(process.argv))
+    const options = yargs(hideBin(process.argv)) //eslint-disable-line
       .usage("Usage: -h <file>")
       .option("i", {
         alias: "input",
@@ -25,6 +26,6 @@ export function Options() {
   function callMain() {
     Main(chooseOptions());
   }
-  
+
   callMain();
 }

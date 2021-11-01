@@ -63,19 +63,18 @@ export function Main(file) {
     var mdtext = "";
     lines.forEach((line) => {
       mdtext += line
-        .replace(/^# (.*$)/gim, "\n<h1>$1</h1>")
+        .replace(/^# (.*$)/gim, "\n<h1>$1</h1>") //eslint-disable-line
         .replace(/^## (.*$)/gim, "\n<h2>$1</h2>")
         .replace(/^### (.*$)/gim, "\n<h3>$1</h3>")
         .replace(/\*\*(.*)\*\*/gim, "<br><b>$1</b>")
-        .replace(/\_\_(.*)\_\_/gim, "<br><b>$1</b>")
+        .replace(/\_\_(.*)\_\_/gim, "<br><b>$1</b>") //eslint-disable-line
         .replace(/\*(.*)\*/gim, "<br><i>$1</i>")
-        .replace(/\_(.*)\_/gim, "<br><i>$1</i>")
-        .replace(/\`(.*)\`/gim, "<br><code>1$</code>")
+        .replace(/\_(.*)\_/gim, "<br><i>$1</i>") //eslint-disable-line
+        .replace(/\`(.*)\`/gim, "<br><code>1$</code>") //eslint-disable-line
         .replace("---", "\n<hr>")
         .replace(/\((.*)\)/gim, "<br><img src='$1' alt='text'></img>");
-
     });
-  
+
     const templatized = templatize(template, {
       content: mdtext,
     });

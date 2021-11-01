@@ -8,5 +8,4 @@ date: Aug 15, 2020
 
 The basic blog page layout is available and all using the default Tailwind CSS classes (although there are a few hardcoded style tags). If you are going to use this in your project, you will want to convert the classes into components.
 
-
 ![Docusaurus](../img/docusaurus.png)

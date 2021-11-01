@@ -2,12 +2,11 @@
 title: Markdown Feature
 ---
 
-
 # This is h1 tag
 
 ## This is h2 tag
 
-*This should be italic*
+_This should be italic_
 
 **This is bold**
 
