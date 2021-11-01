@@ -78,4 +78,4 @@ MIT License
 
 
 
-> `prettier --write`  . is great for formatting everything, but for a big project it might take a little while. You may run `prettier --write app/` to format a certain directory, or prettier `--write app/components/Button.js` to format a certain file. Or use a glob like prettier `--write "app/**/*.test.js" ` to format all tests in a directory`
+> `prettier --write .` is great for formatting everything, but for a big project it might take a little while. You may run `prettier --write app/` to format a certain directory, or prettier `--write app/components/Button.js` to format a certain file. Or use a glob like prettier `--write "app/**/*.test.js" ` to format all tests in a directory`
