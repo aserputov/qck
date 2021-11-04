@@ -1,4 +1,4 @@
-# QCK-SSG ❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️
+#  ❄️ Quick- Static Site Generator ❄️
 
 Version:Release 0.3
 
