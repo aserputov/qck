@@ -51,4 +51,3 @@ or ( check single file or folder byy using:)
 `npx eslint yourfile.js`
 
 
-![giphy](https://user-images.githubusercontent.com/65831678/140279444-678473b7-1e22-468d-a333-9b46eef790d8.gif)
