@@ -1,37 +1,16 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-import { Create } from "./create";
+import { Create } from "./create.js";
 
-// eslint-disable-next-line no-undef
-describe("Create tests", () => {
-  function checkOptions(arr) {
-    expect(options.arr).toBe(arr);
-  }
+const shoppingList = [
+  "diapers",
+  "kleenex",
+  "trash bags",
+  "paper towels",
+  "milk",
+];
 
-//   test("passing an nothing or empty object should result in good defaults", () => {
-//     [null, undefined, {}].forEach((options) => {
-//       const result = applyDefaults(options);
-//       checkOptions(result, 80, 2);
-//     });
-  });
-
-  test("should be able to give no options", () => {
-    const result = Create();
-    checkOptions(result);
-  });
-
-  //   test("should be able to override printWidth", () => {
-  //     const result = applyDefaults({ printWidth: 100 });
-  //     checkOptions(result, 100, 2);
-  //   });
-
-  //   test("should be able to override tabWidth", () => {
-  //     const result = applyDefaults({ tabWidth: 4 });
-  //     checkOptions(result, 80, 4);
-  //   });
-
-  //   test("should be able to override both printWidth and tabWidth", () => {
-  //     const result = applyDefaults({ printWidth: 100, tabWidth: 4 });
-  //     checkOptions(result, 100, 4);
-  //   });
+test("the shopping list has milk on it", () => {
+  expect(shoppingList).toContain("milk");
+  expect(new Set(shoppingList)).toContain("milk");
 });

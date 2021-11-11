@@ -9,6 +9,7 @@ import { Config } from "./config.js";
 
 export function Main(file) {
   let arr = [];
+  console.log(arr);
 
   const readFile = (filename) => {
     const rawFile = fs.readFileSync(filename, "utf8");
@@ -47,6 +48,7 @@ export function Main(file) {
     const file = readFile(filename);
     const outfilename = getOutputFilename(filename, outPath);
     arr.push(` ${outfilename}`);
+    console.log(arr);
     const templatized = templatize(template, {
       link: `${file.stylesheet}`,
       title: file.data.title,
