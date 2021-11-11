@@ -50,6 +50,12 @@ or ( check single file or folder byy using:)
 
 `npx eslint yourfile.js`
 
+## Testing
+
+Two ways how to run the tests.
+
+`./node_modules/.bin/jest`
+
+`npm run test`
 
 ❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️
-

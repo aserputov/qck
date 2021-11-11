@@ -1,14 +1,13 @@
+/* eslint-disable no-undef */
 import fs from "fs";
+import { stat } from "fs";
 
 export function Create(arr) {
-  fs.writeFile(
-    "dist/index.html",
-    "<hr><br><h1><em>List of Stories</em></h1><hr> ",
-    function (err) {
-      if (err) throw err;
-    }
-  );
+  createFile();
+  createAdd(arr);
+}
 
+export function createAdd(arr) {
   arr.forEach((path) => {
     var afterComma = path.substr(path.indexOf("t/") + 2);
     var after = afterComma.substring(0, afterComma.indexOf("."));
@@ -21,4 +20,18 @@ export function Create(arr) {
       }
     );
   });
+}
+
+export function createFile() {
+  fs.writeFile(
+    "dist/index.html",
+    "<hr><br><h1><em>List of Stories</em></h1><hr> ",
+    function (err) {
+      if (err) throw err;
+    }
+  );
+
+  // stat("./dist", (err, stats) => {
+  //   console.log(stats.isDirectory());
+  // });
 }
