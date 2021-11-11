@@ -16,7 +16,8 @@
     "check-lint": "npx eslint . ",
     "dev": "nodemon -e js,md,html --ignore dist/ src/index.js",
     "start": "node src/index.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest"
   },
   "dependencies": {
     "boxen": "^5.1.1",
@@ -31,6 +32,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.0",
+    "jest": "^27.3.1",
     "prettier": "^2.4.1"
   },
   "husky": {

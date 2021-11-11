@@ -8,7 +8,7 @@ import mkdirp from "mkdirp";
 import { Config } from "./config.js";
 
 export function Main(file) {
-  let arr = []; // I can't see the way how to get rid of it because I push into that array all the files path's to build one index.js
+  let arr = [];
 
   const readFile = (filename) => {
     const rawFile = fs.readFileSync(filename, "utf8");
