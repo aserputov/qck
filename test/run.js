@@ -10,4 +10,5 @@ async function run(...args) {
   }
 }
 
-export default run;
+const _run = run;
+export { _run as run };

@@ -16,7 +16,63 @@ TypeError: Cannot read property 'includes' of undefined
     at async Object.loadESM (internal/process/esm_loader.js:68:5)"
 `;
 
+exports[`end-to-end integration prints error and help message when no arguments given 2`] = `
+"file:///Users/anatoliyserputov/QckStaticSiteGenerator/main.js:94
+    if (file.input.includes(\\".\\")) {
+                   ^
+
+TypeError: Cannot read property 'includes' of undefined
+    at main (file:///Users/anatoliyserputov/QckStaticSiteGenerator/main.js:94:20)
+    at Main (file:///Users/anatoliyserputov/QckStaticSiteGenerator/main.js:117:3)
+    at callMain (file:///Users/anatoliyserputov/QckStaticSiteGenerator/options.js:27:5)
+    at Options (file:///Users/anatoliyserputov/QckStaticSiteGenerator/options.js:30:3)
+    at file:///Users/anatoliyserputov/QckStaticSiteGenerator/index.js:7:1
+    at ModuleJob.run (internal/modules/esm/module_job.js:183:25)
+    at async Loader.import (internal/modules/esm/loader.js:178:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)"
+`;
+
+exports[`end-to-end integration prints formatted output to specified width for --indent 1`] = `""`;
+
+exports[`end-to-end integration prints formatted output to specified width for -i 1`] = `""`;
+
 exports[`end-to-end integration prints help message when --help given 1`] = `
+"Usage: -h <file>
+
+Options:
+      --help    Show help                                              [boolean]
+  -i, --input   File name                                               [string]
+  -c, --config  Configuration file                                      [string]
+  -v            version                                                [boolean]"
+`;
+
+exports[`end-to-end integration when argument --help is specified should print help message 1`] = `
+"Usage: -h <file>
+
+Options:
+      --help    Show help                                              [boolean]
+  -i, --input   File name                                               [string]
+  -c, --config  Configuration file                                      [string]
+  -v            version                                                [boolean]"
+`;
+
+exports[`prints error and help message when no arguments given 1`] = `
+"file:///Users/anatoliyserputov/QckStaticSiteGenerator/main.js:94
+    if (file.input.includes(\\".\\")) {
+                   ^
+
+TypeError: Cannot read property 'includes' of undefined
+    at main (file:///Users/anatoliyserputov/QckStaticSiteGenerator/main.js:94:20)
+    at Main (file:///Users/anatoliyserputov/QckStaticSiteGenerator/main.js:117:3)
+    at callMain (file:///Users/anatoliyserputov/QckStaticSiteGenerator/options.js:27:5)
+    at Options (file:///Users/anatoliyserputov/QckStaticSiteGenerator/options.js:30:3)
+    at file:///Users/anatoliyserputov/QckStaticSiteGenerator/index.js:7:1
+    at ModuleJob.run (internal/modules/esm/module_job.js:183:25)
+    at async Loader.import (internal/modules/esm/loader.js:178:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)"
+`;
+
+exports[`prints help message when --help given 1`] = `
 "Usage: -h <file>
 
 Options:

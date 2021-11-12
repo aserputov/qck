@@ -1,11 +1,13 @@
+/* eslint-disable no-undef */
 import fs from "fs";
+import { stat } from "fs";
 
 export function Create(arr) {
   createFile();
   createAdd(arr);
 }
 
-function createAdd(arr) {
+export function createAdd(arr) {
   arr.forEach((path) => {
     var afterComma = path.substr(path.indexOf("t/") + 2);
     var after = afterComma.substring(0, afterComma.indexOf("."));
@@ -20,7 +22,7 @@ function createAdd(arr) {
   });
 }
 
-function createFile() {
+export function createFile() {
   fs.writeFile(
     "dist/index.html",
     "<hr><br><h1><em>List of Stories</em></h1><hr> ",
@@ -28,4 +30,9 @@ function createFile() {
       if (err) throw err;
     }
   );
+  let file;
+  stat("./dist", (err, stats) => {
+    file = console.log(stats.isDirectory());
+  });
+  return file;
 }
