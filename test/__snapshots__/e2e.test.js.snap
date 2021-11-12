@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`end-to-end integration prints .md text into html  1`] = `""`;
+
 exports[`end-to-end integration prints error and help message when no arguments given 1`] = `
 "file:///Users/anatoliyserputov/QckStaticSiteGenerator/main.js:94
     if (file.input.includes(\\".\\")) {

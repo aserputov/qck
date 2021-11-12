@@ -30,9 +30,8 @@ export function createFile() {
       if (err) throw err;
     }
   );
-  let file;
-  stat("./dist", (err, stats) => {
-    file = console.log(stats.isDirectory());
-  });
-  return file;
+
+  // stat("./dist", (err, stats) => {
+  //   console.log(stats.isDirectory());
+  // });
 }
