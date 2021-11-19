@@ -27,7 +27,10 @@ export function createFile() {
     "dist/index.html",
     "<hr><br><h1><em>List of Stories</em></h1><hr> ",
     function (err) {
-      if (err) throw err;
+      if (err)
+        throw new err(
+          `error: required option input <file or directory> is not specified`
+        );
     }
   );
 
