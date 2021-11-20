@@ -14,7 +14,7 @@ Quick (Static Site Generator)- is a software application for creating finished H
 
 - `node . -- input (-i)`
 
-- `node . -- config (-c)`(Themes Update)
+- `node . -- config (-c)`
 
 ## Option Features
 
