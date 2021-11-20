@@ -17,7 +17,6 @@ fs.readdir(directory, (err, files) => {
   }
   fs.writeFile("dist/security.txt", "Learn Node FS module", function (err) {
     if (err) throw err;
-    console.log("File is created successfully.");
   });
 });
 Options();

@@ -12,12 +12,6 @@ Options:
 
 exports[`end-to-end integration prints version message when --version given 1`] = `"qck-ssg v0.1.2"`;
 
-exports[`end-to-end integration single valid text file input should generate an html 1`] = `
-"-- Link to Page Created In Index File
-File is created successfully."
-`;
+exports[`end-to-end integration single valid text file input should generate an html 1`] = `"-- Link to Page Created In Index File"`;
 
-exports[`end-to-end integration single valid text file input should generate an html 2`] = `
-"-- Link to Page Created In Index File
-File is created successfully."
-`;
+exports[`end-to-end integration single valid text file input should generate an html 2`] = `"-- Link to Page Created In Index File"`;
