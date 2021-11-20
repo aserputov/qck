@@ -1,4 +1,4 @@
-#  ❄️ Quick- Static Site Generator ❄️
+#  Quick- Static Site Generator 
 
 Version: Release 0.3
 
