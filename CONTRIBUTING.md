@@ -20,11 +20,13 @@ To launch the app:
 
 (Start from the main directory)
 
-- `node . -i index.txt` (index.txt as an example you can use another file name )
+- ` node . -i index.txt` (index.txt as an example you can use another file name )
 
-- `node . --input /SherlocksStories` (/src/page is an example you can use another path to a folder )
+- ` node . --input /SherlocksStories` (/src/page is an example you can use another path to a folder )
 
 - ` node . --input /SherlocksStories -s https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/tufte.min.css`
+
+- ` node . -- `
 
 ## Requirements. Code Fomatting.
 
