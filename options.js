@@ -20,11 +20,12 @@ export function Options() {
       .version("v", "version", "qck-ssg v0.1.2")
       .alias("s", "stylesheet").argv;
 
-    if (options.input === undefined || options.input === null) {
+    if (options.config === undefined && options.input === undefined) {
       throw new Error(
         `error: Option isn't correct. Please provide correct input`
       );
     }
+
     return options;
   }
 

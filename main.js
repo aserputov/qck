@@ -90,16 +90,15 @@ export function Main(file) {
       path.join(srcPath, "template.html"),
       "utf8"
     );
-
-    if (file.input.includes(".")) {
+    if (file.config) {
+      Config(file);
+    } else if (file.input.includes(".")) {
       const filenames = glob.sync(srcPath + `/**/${file.input}`);
       filenames.forEach((filename) => {
         if (filename.includes("txt")) {
           processFile(filename, template, outPath);
         } else if (filename.includes("md")) {
           processFile_md(filename, template, outPath);
-        } else if (filename.includes(".json")) {
-          Config();
         }
       });
     } else {
