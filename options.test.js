@@ -15,7 +15,7 @@ describe("Options tests", () => {
     });
     expect(() => {
       Options();
-    }).toThrow(`error: Option isn't corect. Please provide correct input`);
+    }).toThrow(`error: Option isn't correct. Please provide correct input`);
   });
 
   test("With input options should not throw error", async () => {

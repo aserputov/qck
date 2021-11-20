@@ -22,7 +22,7 @@ export function Options() {
 
     if (options.input === undefined || options.input === null) {
       throw new Error(
-        `error: Option isn't corect. Please provide correct input`
+        `error: Option isn't correct. Please provide correct input`
       );
     }
     return options;
