@@ -46,7 +46,6 @@ describe("end-to-end integration", () => {
 
   test("single valid json configuration file should generate an html", async () => {
     const { stderr, stdout, exitCode } = await run("--config", "src/conf.json");
-    console.log(stderr);
     expect(exitCode).toBe(0);
     expect(stdout).toMatchSnapshot();
     expect(stderr).toEqual("");
