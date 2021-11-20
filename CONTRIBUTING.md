@@ -26,7 +26,7 @@ To launch the app:
 
 - ` node . --input /SherlocksStories -s https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/tufte.min.css`
 
-- ` node . -- `
+- ` node . --config config.json `
 
 ## Requirements. Code Fomatting.
 
