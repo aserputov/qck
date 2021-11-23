@@ -9,10 +9,6 @@
 
 Current version: Release `1.01`
 
-[EXAMPLE](https://cli-ssg-qck-cmp74iuwg-aserputov.vercel.app)
-
-> :warning: **For Development**: visit [`CONTRIBUTING`](https://github.com/aserputov/QckStaticSiteGenerator/blob/main/CONTRIBUTING.md)!
-
 ## ℹ️ Installation
 
 ```bash
@@ -26,6 +22,8 @@ Current version: Release `1.01`
 example 1: `node . --input /SherlocksStories/testmd.md.`
 
 example 2: `node . --input same.txt`
+
+example 3: [Static Website](https://cli-ssg-qck-cmp74iuwg-aserputov.vercel.app)
 
 ## ℹ️ Features
 
@@ -59,6 +57,10 @@ Configuration file should contain the following attributes: _input_, _stylesheet
     "stylesheet": "https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/tufte.min.css"
 }
 ```
+
+## Development
+
+> :warning: visit [`CONTRIBUTING`](https://github.com/aserputov/QckStaticSiteGenerator/blob/main/CONTRIBUTING.md)!
 
 ## ℹ️ Authors
 
