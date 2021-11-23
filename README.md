@@ -21,6 +21,12 @@ Current version: Release `1.01`
 
 [read more](https://www.npmjs.com/package/qck-ssg-final)
 
+## Usage
+
+example 1: `node . --input /SherlocksStories/testmd.md.`
+
+example 2: `node . --input same.txt`
+
 ## ℹ️ Features
 
 - `node . -- version (-v) `
@@ -29,23 +35,19 @@ Current version: Release `1.01`
 
 - `node . -- input (-i)`
 
+- `node . -- input (-i) --stylesheet(-s)`
+
 - `node . -- config (-c)`
 
 ## ℹ️ Option Features
 
-- type `-s` or `-stylesheet` on the command line, it will be converted to a style tag link.
-
-- `$npm install --save-dev prettier`
+- `Prettier included`
 
 - Populated the `<title>...</title>`
 
 - Automatically generate an `index.html` with all the links.
 
-- Generates markdown file to html file
-
-  example: `node . --input /SherlocksStories/testmd.md`
-
-- Support for configuration files
+- Generates markdown file to html file.
 
 ## ℹ️ Configuration file
 

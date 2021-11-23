@@ -15,9 +15,10 @@
     "prettier": "prettier \"./src/**/*.{js,jsx,json,yaml,yml,md}\" --write",
     "check-lint": "npx eslint . ",
     "dev": "nodemon -e js,md,html --ignore dist/ src/index.js",
-    "start": "node src/index.js",
+    "start": "node .  src/index.js",
     "prepare": "husky install",
-    "test": "jest"
+    "test": "jest",
+    "build": "node . src/index.js"
   },
   "dependencies": {
     "boxen": "^5.1.1",
