@@ -8,6 +8,10 @@ Quick (Static Site Generator)- is a software application for creating finished H
 
 # Installation
 
+- `npm i qck-ssg-final`
+
+... [read more](https://www.npmjs.com/package/qck-ssg-final)
+
 # Features
 
 - `node . -- version (-v) `
