@@ -1,4 +1,9 @@
-# Quick- Static Site Generator
+<h1 align="center">
+  <p align="center">Quick</p>
+  <a href="https://github.com/aserputov/QckStaticSiteGenerator"><img src="" alt="Docusaurus"></a>
+</h1>
+
+# Qck- Static Site Generator
 
 Version: Release 0.3
 
@@ -8,7 +13,9 @@ Quick (Static Site Generator)- is a software application for creating finished H
 
 # Installation
 
-- `npm i qck-ssg-final`
+- ````bash
+  npm i qck-ssg-final```
+  ````
 
 ... [read more](https://www.npmjs.com/package/qck-ssg-final)
 
