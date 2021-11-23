@@ -1,9 +1,9 @@
 <h1 align="center">
-  <p align="center">Quick</p>
+  <p align="center">🖇Quick</p>
   <a href="https://github.com/aserputov/QckStaticSiteGenerator"><img src="https://github.com/aserputov/QckStaticSiteGenerator/blob/main/assets/Screen%20Shot%202021-11-23%20at%201.54.27%20AM.png?raw=true" alt="Docusaurus" height="100px"></a>
 </h1>
 
-# Introduction
+# ℹ️ Introduction
 
 **Quick** (Static Site Generator)- is a software application for creating finished HTML pages from hard data and files, without having to author any HTML by hand. Made with `Node.js.`
 
@@ -11,15 +11,16 @@ Current version: Release `1.01`
 
 > :warning: **For Development**: visit [`CONTRIBUTING`](https://github.com/aserputov/QckStaticSiteGenerator/blob/main/CONTRIBUTING.md)!
 
-# Installation
+# ℹ️ Installation
 
 ```bash
   npm i qck-ssg-final
 ```
 
+[EXAMPLE-vercel](https://cli-ssg-qck-cmp74iuwg-aserputov.vercel.app)
 [read more](https://www.npmjs.com/package/qck-ssg-final)
 
-# Features
+# ℹ️ Features
 
 - `node . -- version (-v) `
 
@@ -29,7 +30,7 @@ Current version: Release `1.01`
 
 - `node . -- config (-c)`
 
-## Option Features
+# ℹ️ Option Features
 
 - type `-s` or `-stylesheet` on the command line, it will be converted to a style tag link.
 
@@ -45,7 +46,7 @@ Current version: Release `1.01`
 
 - Support for configuration files
 
-## Configuration file
+# ℹ️ Configuration file
 
 Configuration file should contain the following attributes: _input_, _stylesheet_
 
@@ -56,16 +57,16 @@ Configuration file should contain the following attributes: _input_, _stylesheet
 }
 ```
 
-# Authors
+# ℹ️ Authors
 
-Anatoliy Serputov
+[aserputov](https://github.com/aserputov)
 
-# Links
+# ℹ️ Links
 
-- Blog [`Medium`](https://medium.com/@aserputov/qck-ssg-eb593782b856)
+- [`Blog`](https://medium.com/@aserputov/qck-ssg-eb593782b856)
 
-- Static Website Ex. [`Vercel`](https://cli-ssg-qck-cmp74iuwg-aserputov.vercel.app)
+- [`Twitter`](https://twitter.com/aserputov)
 
-# License
+# ℹ️ License
 
 MIT License
