@@ -3,19 +3,19 @@
   <a href="https://github.com/aserputov/QckStaticSiteGenerator"><img src="https://github.com/aserputov/QckStaticSiteGenerator/blob/main/assets/Screen%20Shot%202021-11-23%20at%201.54.27%20AM.png?raw=true" alt="Docusaurus" height="100px"></a>
 </h1>
 
-# Qck- Static Site Generator
-
-Version: Release 0.3
+# Introduction
 
 Quick (Static Site Generator)- is a software application for creating finished HTML pages from hard data and files, without having to author any HTML by hand. Made with `Node.js.`
+
+Current version: Release 1.01
 
 > :warning: **For Development**: visit [`CONTRIBUTING`](https://github.com/aserputov/QckStaticSiteGenerator/blob/main/CONTRIBUTING.md)!
 
 # Installation
 
-- ````bash
+````bash
   npm i qck-ssg-final```
-  ````
+````
 
 ... [read more](https://www.npmjs.com/package/qck-ssg-final)
 
