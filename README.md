@@ -14,8 +14,10 @@ Current version: Release 1.01
 # Installation
 
 ```bash
-  npm i qck-ssg-final   [read more](https://www.npmjs.com/package/qck-ssg-final)
+  npm i qck-ssg-final
 ```
+
+[read more](https://www.npmjs.com/package/qck-ssg-final)
 
 # Features
 
