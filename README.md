@@ -62,7 +62,7 @@ Configuration file should contain the following attributes: _input_, _stylesheet
 
 > :warning: visit [`CONTRIBUTING`](https://github.com/aserputov/QckStaticSiteGenerator/blob/main/CONTRIBUTING.md)!
 
-## ℹ️ Authors
+## ℹ️ Contact
 
 Anatoliy Serputov [aserputov](https://github.com/aserputov)
 
