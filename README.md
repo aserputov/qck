@@ -64,7 +64,7 @@ Configuration file should contain the following attributes: _input_, _stylesheet
 
 ## ℹ️ Authors
 
-[aserputov](https://github.com/aserputov)
+Anatoliy Serputov [aserputov](https://github.com/aserputov)
 
 ## ℹ️ Links
 
