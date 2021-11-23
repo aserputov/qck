@@ -1,6 +1,6 @@
 <h1 align="center">
   <p align="center">Quick</p>
-  <a href="https://github.com/aserputov/QckStaticSiteGenerator"><img src="" alt="Docusaurus"></a>
+  <a href="https://github.com/aserputov/QckStaticSiteGenerator"><img src="https://github.com/aserputov/QckStaticSiteGenerator/blob/main/assets/Screen%20Shot%202021-11-23%20at%201.54.27%20AM.png?raw=true" alt="Docusaurus"></a>
 </h1>
 
 # Qck- Static Site Generator
