@@ -11,8 +11,16 @@ Current version: Release `1.01`
 
 ## ℹ️ Installation
 
+NPM
+
 ```bash
   npm i qck-ssg-final
+```
+
+HomeBrew
+
+```bash
+  GitHub repository not notable enough (<30 forks, <30 watchers and <75 stars)
 ```
 
 [read more](https://www.npmjs.com/package/qck-ssg-final)
