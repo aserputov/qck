@@ -17,7 +17,7 @@ Current version: Release `1.01`
 
 [read more](https://www.npmjs.com/package/qck-ssg-final)
 
-## Usage
+## ℹ️ Usage
 
 example 1: `node . --input /SherlocksStories/testmd.md.`
 
@@ -58,7 +58,7 @@ Configuration file should contain the following attributes: _input_, _stylesheet
 }
 ```
 
-## Development
+## ℹ️ Development
 
 > :warning: visit [`CONTRIBUTING`](https://github.com/aserputov/QckStaticSiteGenerator/blob/main/CONTRIBUTING.md)!
 
