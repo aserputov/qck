@@ -1,5 +1,5 @@
 <h1 align="center">
-  <p align="center">🖇Quick</p>
+  <p align="center">🖇 Quick</p>
   <a href="https://github.com/aserputov/QckStaticSiteGenerator"><img src="https://github.com/aserputov/QckStaticSiteGenerator/blob/main/assets/Screen%20Shot%202021-11-23%20at%201.54.27%20AM.png?raw=true" alt="Docusaurus" height="100px"></a>
 </h1>
 
@@ -9,6 +9,8 @@
 
 Current version: Release `1.01`
 
+[EXAMPLE](https://cli-ssg-qck-cmp74iuwg-aserputov.vercel.app)
+
 > :warning: **For Development**: visit [`CONTRIBUTING`](https://github.com/aserputov/QckStaticSiteGenerator/blob/main/CONTRIBUTING.md)!
 
 ## ℹ️ Installation
@@ -17,7 +19,6 @@ Current version: Release `1.01`
   npm i qck-ssg-final
 ```
 
-[EXAMPLE-vercel](https://cli-ssg-qck-cmp74iuwg-aserputov.vercel.app)
 [read more](https://www.npmjs.com/package/qck-ssg-final)
 
 ## ℹ️ Features
