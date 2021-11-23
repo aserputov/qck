@@ -2,7 +2,7 @@
 
 import fs from "fs";
 import path from "path";
-import { Options } from "./options.js";
+import { Options } from "./src/options.js";
 
 // fs.rmdirSync("dist", { recursive: true });
 const directory = "dist";
