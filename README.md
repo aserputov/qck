@@ -21,10 +21,10 @@ NPM
   npm i qck-ssg-final
 ```
 
-Binary.
+Binary
 
 ```bash
-  npm i 
+  npm install
 ```
 
 HomeBrew
