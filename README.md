@@ -3,7 +3,7 @@
   <a href="https://github.com/aserputov/QckStaticSiteGenerator"><img src="https://github.com/aserputov/QckStaticSiteGenerator/blob/main/assets/Screen%20Shot%202021-11-23%20at%201.54.27%20AM.png?raw=true" alt="Docusaurus" height="100px"></a>
 </h1>
 
-[![deploy status](https://github.com/aserputov/Qck/workflows/CI/badge.svg)](https://github.com/aserputov/Qck/actions)
+[![deploy status](https://github.com/Orange-OpenSource/hurl/workflows/CI/badge.svg)](https://github.com/aserputov/Qck/actions)
 <!-- [![Crates.io](https://img.shields.io/crates/v/hurl.svg)](https://crates.io/crates/hurl)
 [![documentation](https://img.shields.io/badge/-documentation-informational)](https://hurl.dev) -->
 
