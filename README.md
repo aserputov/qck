@@ -11,7 +11,7 @@
 
 **Quick** (Static Site Generator)- is a software application for creating finished HTML pages from hard data and files, without having to author any HTML by hand. Made with `Node.js.`
 
-Current version: Release `1.01`
+Current version: (Updated)Release `1.02`
 
 ## ℹ️ Installation
 
