@@ -21,6 +21,12 @@ NPM
   npm i qck-ssg-final
 ```
 
+Binary.
+
+```bash
+  npm i 
+```
+
 HomeBrew
 
 ```bash
