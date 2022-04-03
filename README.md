@@ -1,5 +1,5 @@
 <h1 align="center">
-  <p align="center">🖇 Quick</p>
+  <p align="center">🖇 quick</p>
   <a href="https://github.com/aserputov/QckStaticSiteGenerator"><img src="https://github.com/aserputov/QckStaticSiteGenerator/blob/main/assets/Screen%20Shot%202021-11-23%20at%201.54.27%20AM.png?raw=true" alt="Docusaurus" height="100px"></a>
 </h1>
 
